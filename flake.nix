@@ -6,7 +6,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,7 +34,6 @@ outputs =
           modules = [ ./home/home.nix ];
           extraSpecialArgs = {
             inherit inputs;
-            lib = nixpkgs.lib;
           };
         };
 
